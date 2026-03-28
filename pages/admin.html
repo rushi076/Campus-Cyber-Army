@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Admin Panel | Campus Cyber Army</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../assets/css/admin.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h1>Admin Panel</h1>
+
+<a onclick="switchTab('tasks')">
+📋 Manage Tasks
+</a>
+
+<a onclick="switchTab('students')">
+👥 Registered Students
+</a>
+
+<a onclick="switchTab('leaderboard')">
+🏆 Leaderboard
+</a>
+
+</div>
+
+
+<div class="main-content">
+
+<button class="logout-btn"
+onclick="logout()">
+
+Logout
+
+</button>
+
+
+<div class="section active" id="tasks">
+
+<h2>Manage Tasks</h2>
+
+<button class="btn btn-add"
+onclick="openModal()">
+
+➕ Add Task
+
+</button>
+
+<table>
+
+<thead>
+<tr>
+<th>Task</th>
+<th>Type</th>
+<th>Status</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="task-table-body"></tbody>
+
+</table>
+
+</div>
+
+
+
+<div class="section" id="students">
+
+<h2>Registered Students</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>College</th>
+<th>Points</th>
+</tr>
+</thead>
+
+<tbody id="student-table-body"></tbody>
+
+</table>
+
+</div>
+
+
+
+<div class="section" id="leaderboard">
+
+<h2>Leaderboard</h2>
+
+<select id="college-filter"
+onchange="loadLeaderboard()">
+
+<option value="All">
+All Colleges
+</option>
+
+</select>
+
+<table>
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>College</th>
+<th>Points</th>
+</tr>
+</thead>
+
+<tbody id="leaderboard-table-body"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+
+<div class="modal" id="task-modal"
+onclick="closeModal()">
+
+<div class="modal-content"
+onclick="event.stopPropagation()">
+
+<h3 id="modal-title">
+Add Task
+</h3>
+
+<label>Task Name</label>
+<input type="text" id="task-name"/>
+
+
+<label>Type</label>
+
+<select id="task-type"
+onchange="toggleOptionsField()">
+
+<option value="mcq">MCQ</option>
+<option value="upload">Upload</option>
+
+</select>
+
+
+<div id="options-group">
+
+<label>Option A</label>
+<input type="text" id="optionA"/>
+
+<label>Option B</label>
+<input type="text" id="optionB"/>
+
+<label>Option C</label>
+<input type="text" id="optionC"/>
+
+<label>Option D</label>
+<input type="text" id="optionD"/>
+
+<label>Correct Option</label>
+<input type="text" id="correctOption"/>
+
+</div>
+
+
+<label>Status</label>
+
+<select id="task-status">
+
+<option value="pending">
+Pending
+</option>
+
+<option value="closed">
+Closed
+</option>
+
+</select>
+
+
+<button class="btn btn-add"
+onclick="saveTask()">
+
+Save Task
+
+</button>
+
+</div>
+
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script type="module" src="../assets/js/firebase-config.js"></script>
+<script type="module"src="../assets/js/admin.js"></script>
+
+</body>
+
+</html>
+

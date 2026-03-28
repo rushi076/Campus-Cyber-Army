@@ -1,0 +1,104 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      color: #38bdf8;
+    }
+    nav a {
+      color: #ffffffcc;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #38bdf8;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h2 {
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1.2;
+      color: #e0f2fe;
+    }
+    .hero p {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #94a3b8;
+      max-width: 600px;
+    }
+    .cta-button {
+      margin-top: 20px;
+      background-color: #38bdf8;
+      border: none;
+      padding: 12px 24px;
+      color: #0f172a;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #0ea5e9;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      background-color: #1e293b;
+    }
+    .feature-box {
+      background: #0f172a;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+    }
+    .feature-box h3 {
+      font-size: 20px;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+    .feature-box p {
+      color: #cbd5e1;
+      font-size: 16px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #64748b;
+      background-color: #0f172a;
+    }
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 28px; }
+      .features { flex-direction: column; align-items: center; }
+    }

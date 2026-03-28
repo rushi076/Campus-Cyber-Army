@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Dashboard | Campus Cyber Army</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../assets/css/dashboard.css">
+
+</head>
+
+<body>
+
+<header>
+<h1>Cyber Army Dashboard</h1>
+
+<nav>
+<a href="#">Tasks</a>
+<a href="#" onclick="logout()">Logout</a>
+</nav>
+
+</header>
+
+
+<div class="dashboard-container">
+
+<h2 class="welcome">
+👋 Welcome, <span id="userName">Loading...</span>
+</h2>
+
+<a href="leaderboard.html" class="leaderboard-link">
+🏆 View Leaderboard
+</a>
+
+
+<div class="grid">
+
+<div class="card">
+<h3>Total Points</h3>
+<p id="points">0</p>
+</div>
+
+<div class="card">
+<h3>Tasks Completed</h3>
+<p id="completed">0</p>
+</div>
+
+</div>
+
+
+<div class="task-table">
+
+<h2>📋 My Tasks</h2>
+
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="taskList"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<div id="modal" class="modal hidden">
+<div class="modal-content" id="modalContent"></div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script type="module" src="../assets/js/firebase-config.js"></script>
+<script type="module" src="../assets/js/dashboard.js"></script>
+
+</body>
+
+</html>

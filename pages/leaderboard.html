@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Leaderboard | Campus Cyber Army</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../assets/css/leaderboard.css">
+
+</head>
+
+<body>
+
+<a href="dashboard.html" class="back-btn">
+⬅ Back to Dashboard
+</a>
+
+<h1 id="leaderboard-title">
+🎓 My College Leaderboard
+</h1>
+
+
+<div class="tabs">
+
+<button class="tab-btn"
+onclick="showLeaderboard('college')">
+
+🎓 My College
+
+</button>
+
+
+<button class="tab-btn"
+onclick="showLeaderboard('global')">
+
+🌍 Cyber Army Global
+
+</button>
+
+</div>
+
+
+<table>
+
+<thead>
+
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Points</th>
+</tr>
+
+</thead>
+
+<tbody id="leaderboard-body"></tbody>
+
+</table>
+
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<script type="module" src="../assets/js/firebase-config.js"></script>
+<script type="module" src="../assets/js/leaderboard.js"></script>
+</body>
+
+</html>
+
